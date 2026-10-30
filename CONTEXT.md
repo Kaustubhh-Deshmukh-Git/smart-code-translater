@@ -23,7 +23,7 @@
 - [x] C05 - Email/password login service
 - [x] C06 - Google SSO + profile service
 - [x] C07 - Auth controller
-- [ ] C08 - Auth + error middleware
+- [x] C08 - Auth + error middleware
 - [ ] C09 - Auth routes + route registry
 - [ ] C10 - Express app, MongoDB, server start
 
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C08`
+`C09`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
