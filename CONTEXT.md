@@ -25,7 +25,7 @@
 - [x] C07 - Auth controller
 - [x] C08 - Auth + error middleware
 - [x] C09 - Auth routes + route registry
-- [ ] C10 - Express app, MongoDB, server start
+- [x] C10 - Express app, MongoDB, server start
 
 ### Part 1 - Frontend (Auth Flow)
 - [ ] C11 - React + Vite client setup
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C10`
+`C11`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
