@@ -24,7 +24,7 @@
 - [x] C06 - Google SSO + profile service
 - [x] C07 - Auth controller
 - [x] C08 - Auth + error middleware
-- [ ] C09 - Auth routes + route registry
+- [x] C09 - Auth routes + route registry
 - [ ] C10 - Express app, MongoDB, server start
 
 ### Part 1 - Frontend (Auth Flow)
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C09`
+`C10`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
