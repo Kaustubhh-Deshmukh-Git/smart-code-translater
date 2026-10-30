@@ -1,6 +1,7 @@
 import bcrypt from "bcryptjs";
 import User from "../models/User.model.js";
 import { generateToken } from "../utils/jwt.utils.js";
+import { verifyGoogleToken } from "../config/google.config.js";
 
 export const register = async (name, email, password) => {
   const existingUser = await User.findOne({ email });
@@ -61,3 +62,42 @@ export const emailLogin = async (email, password) => {
   };
 };
 
+export const googleLogin = async (credential) => {
+  const { googleId, email, name, picture } = await verifyGoogleToken(credential);
+
+  const user = await User.findOneAndUpdate(
+    { googleId },
+    { googleId, email, name, picture, lastLogin: new Date() },
+    { upsert: true, returnDocument: "after", setDefaultsOnInsert: true }
+  );
+
+  const token = generateToken(user);
+
+  return {
+    token,
+    user: {
+      id: user._id,
+      email: user.email,
+      name: user.name,
+      picture: user.picture,
+    },
+  };
+};
+
+export const getUserProfile = async (userId) => {
+  const user = await User.findById(userId).select("-__v -googleId");
+  if (!user) {
+    const error = new Error("User not found");
+    error.statusCode = 404;
+    throw error;
+  }
+
+  return {
+    id: user._id,
+    email: user.email,
+    name: user.name,
+    picture: user.picture,
+    lastLogin: user.lastLogin,
+    createdAt: user.createdAt,
+  };
+};

@@ -21,7 +21,7 @@
 - [x] C03 - JWT utilities
 - [x] C04 - Registration service
 - [x] C05 - Email/password login service
-- [ ] C06 - Google SSO + profile service
+- [x] C06 - Google SSO + profile service
 - [ ] C07 - Auth controller
 - [ ] C08 - Auth + error middleware
 - [ ] C09 - Auth routes + route registry
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C06`
+`C07`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
