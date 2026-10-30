@@ -18,7 +18,7 @@
 ### Part 1 - Backend (Authentication)
 - [x] C01 - Server project + environment
 - [x] C02 - User model
-- [ ] C03 - JWT utilities
+- [x] C03 - JWT utilities
 - [ ] C04 - Registration service
 - [ ] C05 - Email/password login service
 - [ ] C06 - Google SSO + profile service
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C03`
+`C04`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
