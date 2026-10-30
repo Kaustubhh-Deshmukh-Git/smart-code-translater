@@ -17,7 +17,7 @@
 
 ### Part 1 - Backend (Authentication)
 - [x] C01 - Server project + environment
-- [ ] C02 - User model
+- [x] C02 - User model
 - [ ] C03 - JWT utilities
 - [ ] C04 - Registration service
 - [ ] C05 - Email/password login service
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C02`
+`C03`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
