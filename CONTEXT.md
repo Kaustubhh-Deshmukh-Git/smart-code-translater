@@ -16,7 +16,7 @@
 ## Progress
 
 ### Part 1 - Backend (Authentication)
-- [ ] C01 - Server project + environment
+- [x] C01 - Server project + environment
 - [ ] C02 - User model
 - [ ] C03 - JWT utilities
 - [ ] C04 - Registration service
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C01` (update this line when you finish a chunk)
+`C02`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
