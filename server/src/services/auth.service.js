@@ -29,3 +29,35 @@ export const register = async (name, email, password) => {
     },
   };
 };
+
+export const emailLogin = async (email, password) => {
+  const user = await User.findOne({ email });
+  if (!user || !user.password) {
+    const error = new Error("Invalid email or password.");
+    error.statusCode = 401;
+    throw error;
+  }
+
+  const isMatch = await bcrypt.compare(password, user.password);
+  if (!isMatch) {
+    const error = new Error("Invalid email or password.");
+    error.statusCode = 401;
+    throw error;
+  }
+
+  user.lastLogin = new Date();
+  await user.save();
+
+  const token = generateToken(user);
+
+  return {
+    token,
+    user: {
+      id: user._id,
+      email: user.email,
+      name: user.name,
+      picture: user.picture,
+    },
+  };
+};
+

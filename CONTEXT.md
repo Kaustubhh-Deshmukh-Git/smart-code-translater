@@ -20,7 +20,7 @@
 - [x] C02 - User model
 - [x] C03 - JWT utilities
 - [x] C04 - Registration service
-- [ ] C05 - Email/password login service
+- [x] C05 - Email/password login service
 - [ ] C06 - Google SSO + profile service
 - [ ] C07 - Auth controller
 - [ ] C08 - Auth + error middleware
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C05`
+`C06`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
