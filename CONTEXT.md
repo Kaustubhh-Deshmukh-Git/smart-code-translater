@@ -32,7 +32,7 @@
 - [x] C12 - Axios instance + JWT interceptor
 - [x] C13 - Auth service functions
 - [x] C14 - AuthContext (global auth state)
-- [ ] C15 - ProtectedRoute
+- [x] C15 - ProtectedRoute
 - [ ] C16 - Login page (email + Google SSO)
 - [ ] C17 - App routing + entry point
 - [ ] C18 - Navbar
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C15`
+`C16`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
