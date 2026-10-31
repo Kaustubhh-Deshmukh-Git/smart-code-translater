@@ -35,7 +35,7 @@
 - [x] C15 - ProtectedRoute
 - [x] C16 - Login page (email + Google SSO)
 - [x] C17 - App routing + entry point
-- [ ] C18 - Navbar
+- [x] C18 - Navbar
 - [ ] C19 - Part 1 verification + release v0.1.0
 
 ### Part 2 - Backend (AI Features + History)
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C18`
+`C19`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
