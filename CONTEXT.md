@@ -28,7 +28,7 @@
 - [x] C10 - Express app, MongoDB, server start
 
 ### Part 1 - Frontend (Auth Flow)
-- [ ] C11 - React + Vite client setup
+- [x] C11 - React + Vite client setup
 - [ ] C12 - Axios instance + JWT interceptor
 - [ ] C13 - Auth service functions
 - [ ] C14 - AuthContext (global auth state)
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C11`
+`C12`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
