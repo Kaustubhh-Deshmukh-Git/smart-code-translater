@@ -30,7 +30,7 @@
 ### Part 1 - Frontend (Auth Flow)
 - [x] C11 - React + Vite client setup
 - [x] C12 - Axios instance + JWT interceptor
-- [ ] C13 - Auth service functions
+- [x] C13 - Auth service functions
 - [ ] C14 - AuthContext (global auth state)
 - [ ] C15 - ProtectedRoute
 - [ ] C16 - Login page (email + Google SSO)
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C13`
+`C14`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
