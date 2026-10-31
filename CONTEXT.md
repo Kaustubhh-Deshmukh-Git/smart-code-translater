@@ -33,7 +33,7 @@
 - [x] C13 - Auth service functions
 - [x] C14 - AuthContext (global auth state)
 - [x] C15 - ProtectedRoute
-- [ ] C16 - Login page (email + Google SSO)
+- [x] C16 - Login page (email + Google SSO)
 - [ ] C17 - App routing + entry point
 - [ ] C18 - Navbar
 - [ ] C19 - Part 1 verification + release v0.1.0
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C16`
+`C17`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
