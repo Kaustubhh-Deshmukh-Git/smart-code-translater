@@ -45,7 +45,7 @@
 - [x] C23 - Four code services
 - [x] C24 - History model + service
 - [x] C25 - Code controller
-- [ ] C26 - History controller
+- [x] C26 - History controller
 - [ ] C27 - Code + history routes, registry update
 
 ### Part 2 - Frontend (Editor, Output, History)
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C26`
+`C27`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
