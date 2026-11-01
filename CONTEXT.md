@@ -42,7 +42,7 @@
 - [x] C20 - Gemini AI setup
 - [x] C21 - Supported languages + prompt templates
 - [x] C22 - Response utilities
-- [ ] C23 - Four code services
+- [x] C23 - Four code services
 - [ ] C24 - History model + service
 - [ ] C25 - Code controller
 - [ ] C26 - History controller
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C23`
+`C24`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
