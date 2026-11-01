@@ -43,7 +43,7 @@
 - [x] C21 - Supported languages + prompt templates
 - [x] C22 - Response utilities
 - [x] C23 - Four code services
-- [ ] C24 - History model + service
+- [x] C24 - History model + service
 - [ ] C25 - Code controller
 - [ ] C26 - History controller
 - [ ] C27 - Code + history routes, registry update
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C24`
+`C25`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
