@@ -39,7 +39,7 @@
 - [x] C19 - Part 1 verification + release v0.1.0
 
 ### Part 2 - Backend (AI Features + History)
-- [ ] C20 - Gemini AI setup
+- [x] C20 - Gemini AI setup
 - [ ] C21 - Supported languages + prompt templates
 - [ ] C22 - Response utilities
 - [ ] C23 - Four code services
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C20`
+`C21`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
