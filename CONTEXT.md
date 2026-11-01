@@ -40,7 +40,7 @@
 
 ### Part 2 - Backend (AI Features + History)
 - [x] C20 - Gemini AI setup
-- [ ] C21 - Supported languages + prompt templates
+- [x] C21 - Supported languages + prompt templates
 - [ ] C22 - Response utilities
 - [ ] C23 - Four code services
 - [ ] C24 - History model + service
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C21`
+`C22`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
