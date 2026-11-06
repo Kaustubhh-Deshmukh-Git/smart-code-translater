@@ -23,6 +23,22 @@ npm --prefix server run dev          # http://localhost:5000
 npm --prefix client run dev          # http://localhost:5173
 ```
 
+## Docker Quickstart
+Run the entire stack (MongoDB, Express server, and Nginx-served Vite client) locally via Docker Compose:
+```bash
+# Ensure server/.env contains required environment variables (e.g. GEMINI_API_KEY, JWT_SECRET)
+docker compose up --build -d
+
+# Verify server health check endpoint
+curl -s http://localhost:5000/api/health
+
+# Follow container logs
+docker compose logs -f
+
+# Stop and remove containers, networks, and volumes
+docker compose down
+```
+
 ## Environment
 | File | Variable | Purpose |
 |---|---|---|

@@ -63,11 +63,11 @@
 - [x] H3 - Observability and ops basics
 - [x] H4 - Automated tests
 - [x] H5 - CI/CD and repo governance
-- [ ] H6 - Containerization
+- [x] H6 - Containerization
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`H6`
+`H7`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.

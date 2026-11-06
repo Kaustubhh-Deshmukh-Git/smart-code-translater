@@ -1,0 +1,28 @@
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    volumes: [mongo-data:/data/db]
+    ports: ["27017:27017"]
+
+  server:
+    build: ./server
+    env_file: ./server/.env
+    environment:
+      MONGODB_URI: mongodb://mongo:27017/smart-code-translater
+      CLIENT_URL: http://localhost:5173
+      PORT: "5000"
+    depends_on: [mongo]
+    ports: ["5000:5000"]
+
+  client:
+    build:
+      context: ./client
+      args:
+        VITE_API_URL: http://localhost:5000/api
+        VITE_GOOGLE_CLIENT_ID: ${VITE_GOOGLE_CLIENT_ID:-}
+    depends_on: [server]
+    ports: ["5173:80"]
+
+volumes:
+  mongo-data:
