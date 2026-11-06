@@ -58,7 +58,7 @@
 - [x] C34 - Final routing update + release v0.2.0
 
 ### Part 3 - Industry Hardening (added on top of the guide)
-- [ ] H1 - Lint, format, commit hooks
+- [x] H1 - Lint, format, commit hooks
 - [ ] H2 - Security hardening
 - [ ] H3 - Observability and ops basics
 - [ ] H4 - Automated tests
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`H1`
+`H2`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.

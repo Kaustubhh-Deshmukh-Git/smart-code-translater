@@ -60,7 +60,7 @@ const HomePage = () => {
       setCopied(true);
       toast.success("Copied to clipboard!");
       setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
+    } catch {
       toast.error("Failed to copy to clipboard.");
     }
   };
@@ -90,11 +90,7 @@ const HomePage = () => {
       const data = await fns[activeAction]();
       setResult(data);
     } catch (error) {
-      toast.error(
-        error.response?.data?.message ||
-          error.message ||
-          "Failed to process code."
-      );
+      toast.error(error.response?.data?.message || error.message || "Failed to process code.");
     } finally {
       setLoading(false);
     }
@@ -119,12 +115,7 @@ const HomePage = () => {
             </button>
           ))}
         </div>
-        <button
-          className="run-btn"
-          onClick={handleRun}
-          disabled={loading}
-          type="button"
-        >
+        <button className="run-btn" onClick={handleRun} disabled={loading} type="button">
           {loading ? "Running..." : "Run"}
         </button>
       </div>
@@ -142,11 +133,7 @@ const HomePage = () => {
             />
           </div>
           <div className="panel-body">
-            <CodeEditor
-              code={code}
-              onChange={setCode}
-              language={sourceLanguage}
-            />
+            <CodeEditor code={code} onChange={setCode} language={sourceLanguage} />
           </div>
         </div>
 
@@ -181,11 +168,7 @@ const HomePage = () => {
               <span className="action-badge">{activeAction}</span>
             )}
             {result && !loading && (
-              <button
-                className="copy-btn"
-                onClick={handleCopy}
-                type="button"
-              >
+              <button className="copy-btn" onClick={handleCopy} type="button">
                 {copied ? "Copied!" : "Copy"}
               </button>
             )}
@@ -196,11 +179,7 @@ const HomePage = () => {
                 <div className="spinner"></div>
               </div>
             ) : (
-              <OutputPanel
-                result={result}
-                action={activeAction}
-                targetLanguage={targetLanguage}
-              />
+              <OutputPanel result={result} action={activeAction} targetLanguage={targetLanguage} />
             )}
           </div>
         </div>

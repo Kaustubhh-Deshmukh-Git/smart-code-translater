@@ -2,11 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import toast from "react-hot-toast";
 import HistoryList from "../components/HistoryList.jsx";
 import CodeEditor from "../components/CodeEditor.jsx";
-import {
-  getHistory,
-  deleteHistoryItem,
-  clearHistory,
-} from "../services/historyService.js";
+import { getHistory, deleteHistoryItem, clearHistory } from "../services/historyService.js";
 import "../styles/history.css";
 
 const HistoryPage = () => {
@@ -23,11 +19,7 @@ const HistoryPage = () => {
       setEntries(data.entries || []);
       setTotalPages(data.totalPages || 1);
     } catch (error) {
-      toast.error(
-        error.response?.data?.message ||
-          error.message ||
-          "Failed to load history"
-      );
+      toast.error(error.response?.data?.message || error.message || "Failed to load history");
     } finally {
       setLoading(false);
     }
@@ -49,7 +41,7 @@ const HistoryPage = () => {
       } else {
         fetchEntries(currentPage);
       }
-    } catch (error) {
+    } catch {
       toast.error("Failed to delete");
     }
   };
@@ -65,7 +57,7 @@ const HistoryPage = () => {
       setCurrentPage(1);
       setTotalPages(1);
       toast.success("History cleared");
-    } catch (error) {
+    } catch {
       toast.error("Failed to clear history");
     }
   };
@@ -82,11 +74,7 @@ const HistoryPage = () => {
         <div className="history-sidebar-header">
           <h2>History</h2>
           {entries.length > 0 && (
-            <button
-              className="clear-btn"
-              onClick={handleClearAll}
-              type="button"
-            >
+            <button className="clear-btn" onClick={handleClearAll} type="button">
               Clear all
             </button>
           )}
@@ -142,17 +130,13 @@ const HistoryPage = () => {
       {/* Detail Panel */}
       <main className="history-detail">
         {!selectedEntry ? (
-          <div className="history-detail-empty">
-            Select an entry from history to view details
-          </div>
+          <div className="history-detail-empty">Select an entry from history to view details</div>
         ) : (
           <>
             <div className="history-detail-header">
               <div className="detail-header-left">
                 <span className="history-type-badge">{selectedEntry.type}</span>
-                <span className="history-item-date">
-                  {formatDate(selectedEntry.createdAt)}
-                </span>
+                <span className="history-item-date">{formatDate(selectedEntry.createdAt)}</span>
                 <span className="history-item-langs">
                   {selectedEntry.sourceLanguage}
                   {selectedEntry.targetLanguage && ` → ${selectedEntry.targetLanguage}`}
@@ -188,9 +172,7 @@ const HistoryPage = () => {
                 <div className="detail-section-title">
                   <span>Output</span>
                   {selectedEntry.targetLanguage && (
-                    <span className="detail-badge">
-                      {selectedEntry.targetLanguage}
-                    </span>
+                    <span className="detail-badge">{selectedEntry.targetLanguage}</span>
                   )}
                 </div>
 
@@ -208,9 +190,7 @@ const HistoryPage = () => {
                     {selectedEntry.output?.suggestions && (
                       <div className="detail-suggestions-card">
                         <h4>Suggestions</h4>
-                        <p className="pre-wrap-text">
-                          {selectedEntry.output.suggestions}
-                        </p>
+                        <p className="pre-wrap-text">{selectedEntry.output.suggestions}</p>
                       </div>
                     )}
                   </>

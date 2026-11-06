@@ -7,10 +7,9 @@ export const askGemini = async (prompt) => {
       throw new Error("Gemini returned an empty response");
     }
     return text;
-  } catch (error) {
+  } catch {
     const aiError = new Error("AI service failed. Please try again.");
     aiError.statusCode = 502;
     throw aiError;
   }
 };
-
