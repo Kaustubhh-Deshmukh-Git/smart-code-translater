@@ -65,11 +65,53 @@ export const emailLogin = async (email, password) => {
 export const googleLogin = async (credential) => {
   const { googleId, email, name, picture } = await verifyGoogleToken(credential);
 
-  const user = await User.findOneAndUpdate(
-    { googleId },
-    { googleId, email, name, picture, lastLogin: new Date() },
-    { upsert: true, returnDocument: "after", setDefaultsOnInsert: true }
-  );
+  let user = await User.findOne({ googleId });
+
+  if (user) {
+    user.lastLogin = new Date();
+    if (picture && !user.picture) {
+      user.picture = picture;
+    }
+    await user.save();
+  } else {
+    user = await User.findOne({ email });
+    if (user) {
+      // Link existing account with Google ID
+      user.googleId = googleId;
+      if (picture && !user.picture) {
+        user.picture = picture;
+      }
+      user.lastLogin = new Date();
+      await user.save();
+    } else {
+      try {
+        user = await User.create({
+          googleId,
+          email,
+          name,
+          picture: picture || "",
+          lastLogin: new Date(),
+        });
+      } catch (err) {
+        // Handle race condition on duplicate key (E11000)
+        if (err.code === 11000) {
+          user = await User.findOne({
+            $or: [{ googleId }, { email }],
+          });
+          if (user) {
+            if (!user.googleId) user.googleId = googleId;
+            if (picture && !user.picture) user.picture = picture;
+            user.lastLogin = new Date();
+            await user.save();
+          } else {
+            throw err;
+          }
+        } else {
+          throw err;
+        }
+      }
+    }
+  }
 
   const token = generateToken(user);
 

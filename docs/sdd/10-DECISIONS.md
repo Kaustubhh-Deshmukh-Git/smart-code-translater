@@ -16,3 +16,13 @@ The build follows the source guide strictly. Everything below is an intentional,
 | ADR-010 | CSS files regenerated if the course starter styles are not available | the guide says styles are "provided"; they are not part of this pack |
 
 Add new rows here whenever implementation diverges from the spec.
+
+## ADR-004: Account Linking on Google SSO
+- **Context:** If a user registers with email/password, a later sign-in with Google carrying the same verified email would fail with a MongoDB duplicate key error (`E11000`) under a naive `googleId` upsert.
+- **Decision:** Implement multi-step account resolution:
+  1. Check for an existing account matching `googleId`.
+  2. If absent, check for an existing account matching `email` and link `googleId` and `picture`.
+  3. If neither exists, create a new user document.
+  4. In the event of a concurrent creation race condition (`E11000`), retry the lookup by `googleId` or `email` and safely link.
+- **Consequence:** Seamless sign-in experience across authentication providers without account collision or duplicate registration failures.
+
