@@ -64,10 +64,10 @@
 - [x] H4 - Automated tests
 - [x] H5 - CI/CD and repo governance
 - [x] H6 - Containerization
-- [ ] H7 - Final documentation + release v1.0.0
+- [x] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`H7`
+`Complete (v1.0.0 released)`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.

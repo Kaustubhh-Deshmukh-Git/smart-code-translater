@@ -3,6 +3,16 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) - Versioning: [SemVer](https://semver.org/).
 
+## [1.0.0] - 2026-11-06
+
+### Added
+- **Production Code Quality & Standards (H1):** ESLint flat config across monorepo packages, Prettier code style formatting, Husky Git pre-commit and commit-msg hooks, and Commitlint conventional commit enforcement.
+- **Security Hardening (H2):** HTTP security headers via `helmet`, tiered rate limiting (`authLimiter` 20 req/15m, `codeLimiter` 30 req/1m), strict 100kb payload size limit, CORS allow-listing, Zod schema validation middleware across all input endpoints, automatic Google OAuth account linking with conflict resolution, and client-side 401 token expiry interceptor.
+- **Observability & Operational Resilience (H3):** Morgan HTTP access logging, `GET /api/health` monitoring endpoint reporting uptime and MongoDB connection state, startup fail-fast environment validation (`env.config.js`), and graceful process shutdown handlers (`SIGTERM`, `SIGINT`, uncaught exceptions, and unhandled rejections).
+- **Automated Testing Suite (H4):** Server unit and integration tests using Vitest and Supertest covering utilities, route protection, input validation, and health checks (19 passing tests); React frontend component tests using Vitest, Testing Library, and JSDOM (`ProtectedRoute`, `OutputPanel` - 8 passing tests).
+- **Continuous Integration & Governance (H5):** GitHub Actions dual-matrix CI pipeline validating linting, tests, client production build, and security vulnerability audits on every push and pull request; repository governance files including `CODEOWNERS`, issue templates, PR template, and documented branch protection rules.
+- **Containerization (H6):** Multi-stage Dockerfiles for backend (`server/Dockerfile` with non-root user execution and health check) and frontend (`client/Dockerfile` with Nginx reverse proxy and SPA routing fallback); `docker-compose.yml` for unified one-command local orchestration with containerized MongoDB.
+
 ## [0.2.0] - 2026-11-06
 
 ### Added

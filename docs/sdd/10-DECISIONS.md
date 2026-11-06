@@ -14,6 +14,7 @@ The build follows the source guide strictly. Everything below is an intentional,
 | ADR-008 | Register returns 201 | guide does not state it; REST convention |
 | ADR-009 | 502 for upstream AI failures | distinguishes our bugs (500) from Gemini failures |
 | ADR-010 | CSS files regenerated if the course starter styles are not available | the guide says styles are "provided"; they are not part of this pack |
+| ADR-011 | Override DOMPurify to ^3.4.17 in client package.json | Monaco Editor bundle pulled DOMPurify <= 3.4.16 with GHSA-p98j-92pf-mc4p vulnerability; npm override forces the patched version |
 
 Add new rows here whenever implementation diverges from the spec.
 
