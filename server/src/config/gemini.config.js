@@ -15,4 +15,3 @@ export const generateContent = async (prompt) => {
     throw error;
   }
 };
-

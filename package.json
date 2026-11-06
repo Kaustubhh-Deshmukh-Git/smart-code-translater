@@ -3,7 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "npm --prefix server run lint && npm --prefix client run lint",
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@commitlint/cli": "^21.2.4",

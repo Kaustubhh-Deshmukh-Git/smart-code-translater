@@ -21,11 +21,7 @@ export const getUserHistory = async (userId, page = 1, limit = 10) => {
   const skip = (parsedPage - 1) * parsedLimit;
 
   const [entries, totalEntries] = await Promise.all([
-    History.find({ userId })
-      .sort({ createdAt: -1 })
-      .skip(skip)
-      .limit(parsedLimit)
-      .lean(),
+    History.find({ userId }).sort({ createdAt: -1 }).skip(skip).limit(parsedLimit).lean(),
     History.countDocuments({ userId }),
   ]);
 

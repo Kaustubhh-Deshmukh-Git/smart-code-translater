@@ -24,11 +24,7 @@ const OutputPanel = ({ result, action, targetLanguage }) => {
   if (action === "translate") {
     return (
       <div className="output-panel">
-        <CodeEditor
-          code={result?.translatedCode || ""}
-          language={targetLanguage}
-          readOnly={true}
-        />
+        <CodeEditor code={result?.translatedCode || ""} language={targetLanguage} readOnly={true} />
       </div>
     );
   }
@@ -38,14 +34,8 @@ const OutputPanel = ({ result, action, targetLanguage }) => {
       <div className="output-panel">
         <div className="output-content">
           <div className="info-cards-grid">
-            <InfoCard
-              title="Time Complexity"
-              value={result?.timeComplexity}
-            />
-            <InfoCard
-              title="Space Complexity"
-              value={result?.spaceComplexity}
-            />
+            <InfoCard title="Time Complexity" value={result?.timeComplexity} />
+            <InfoCard title="Space Complexity" value={result?.spaceComplexity} />
           </div>
           {result?.explanation && (
             <div className="explanation-section">

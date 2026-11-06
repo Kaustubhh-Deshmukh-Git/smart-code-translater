@@ -1,6 +1,9 @@
 # Smart Code Translator
 
 [![CI](https://github.com/Kaustubhh-Deshmukh-Git/smart-code-translater/actions/workflows/ci.yml/badge.svg)](https://github.com/Kaustubhh-Deshmukh-Git/smart-code-translater/actions/workflows/ci.yml)
+[![Deploy to GitHub Pages](https://github.com/Kaustubhh-Deshmukh-Git/smart-code-translater/actions/workflows/deploy-pages.yml/badge.svg)](https://kaustubhh-deshmukh-git.github.io/smart-code-translater/)
+
+🌐 **Live Demo:** [https://kaustubhh-deshmukh-git.github.io/smart-code-translater/](https://kaustubhh-deshmukh-git.github.io/smart-code-translater/)
 
 AI-powered full-stack application to **translate**, **analyze (Big-O)**, **optimize**, and **explain** code across C, C++, C#, Java, and Python.
 Built with React 18, Vite, Express (ESM), MongoDB (Mongoose), Google OAuth 2.0 / JWT, Google Gemini AI, and Monaco Editor.
@@ -44,25 +47,27 @@ graph TD
 
 ## Screenshots & UI Walkthrough
 
-| Login & Authentication | Workspace & Monaco Editor |
-| :---: | :---: |
-| *(Email/password & Google SSO login)* | *(Dual-panel workspace with language selector and actions)* |
+|        Login & Authentication         |                  Workspace & Monaco Editor                  |
+| :-----------------------------------: | :---------------------------------------------------------: |
+| _(Email/password & Google SSO login)_ | _(Dual-panel workspace with language selector and actions)_ |
 
-| Output Panel (Analysis / Optimization) | Paginated History Page |
-| :---: | :---: |
-| *(Formatted Big-O badges, syntax highlighted output)* | *(Searchable history items, detail preview, batch clear)* |
+|        Output Panel (Analysis / Optimization)         |                  Paginated History Page                   |
+| :---------------------------------------------------: | :-------------------------------------------------------: |
+| _(Formatted Big-O badges, syntax highlighted output)_ | _(Searchable history items, detail preview, batch clear)_ |
 
 ---
 
 ## Quick Start
 
 ### Prerequisites
+
 - Node.js >= 22
 - MongoDB Atlas cluster or local MongoDB instance
 - Google Gemini API key
 - Google Cloud OAuth Client ID (optional for Google SSO)
 
 ### Local Development
+
 ```bash
 # 1. Clone repository
 git clone https://github.com/Kaustubhh-Deshmukh-Git/smart-code-translater.git && cd smart-code-translater
@@ -106,41 +111,43 @@ docker compose down
 
 ## Available Scripts
 
-| Scope | Script | Description |
-|---|---|---|
-| Root | `npm run format` | Format entire repository with Prettier |
-| Root | `npm run lint` | Run ESLint checks across both server and client |
-| Server | `npm --prefix server run dev` | Start Express server with nodemon |
-| Server | `npm --prefix server run start` | Start Express server in production mode |
-| Server | `npm --prefix server run test` | Run Vitest unit and integration tests |
-| Server | `npm --prefix server run lint` | Run ESLint with flat config |
-| Client | `npm --prefix client run dev` | Start Vite dev server with HMR |
+| Scope  | Script                          | Description                                       |
+| ------ | ------------------------------- | ------------------------------------------------- |
+| Root   | `npm run format`                | Format entire repository with Prettier            |
+| Root   | `npm run lint`                  | Run ESLint checks across both server and client   |
+| Server | `npm --prefix server run dev`   | Start Express server with nodemon                 |
+| Server | `npm --prefix server run start` | Start Express server in production mode           |
+| Server | `npm --prefix server run test`  | Run Vitest unit and integration tests             |
+| Server | `npm --prefix server run lint`  | Run ESLint with flat config                       |
+| Client | `npm --prefix client run dev`   | Start Vite dev server with HMR                    |
 | Client | `npm --prefix client run build` | Build production client bundle into `client/dist` |
-| Client | `npm --prefix client run test` | Run client unit tests with Vitest and JSDOM |
-| Client | `npm --prefix client run lint` | Run ESLint on client codebase |
+| Client | `npm --prefix client run test`  | Run client unit tests with Vitest and JSDOM       |
+| Client | `npm --prefix client run lint`  | Run ESLint on client codebase                     |
 
 ---
 
 ## Environment Variables
 
 ### Server (`server/.env`)
-| Variable | Required | Default | Purpose |
-|---|---|---|---|
-| `PORT` | No | `5000` | Port for the Express server |
-| `NODE_ENV` | No | `development` | Environment mode (`development`, `production`, `test`) |
-| `CLIENT_URL` | Yes | `http://localhost:5173` | Allowed CORS origin |
-| `MONGODB_URI` | Yes | - | MongoDB connection string |
-| `JWT_SECRET` | Yes | - | Secret key for signing session tokens (64+ chars) |
-| `JWT_EXPIRES_IN` | No | `7d` | Token expiry duration |
-| `GOOGLE_CLIENT_ID` | Yes | - | Google OAuth 2.0 Web Client ID |
-| `GEMINI_API_KEY` | Yes | - | Google Gemini AI API key |
-| `GEMINI_MODEL` | No | `gemini-2.5-flash` | Gemini model identifier |
+
+| Variable           | Required | Default                 | Purpose                                                |
+| ------------------ | -------- | ----------------------- | ------------------------------------------------------ |
+| `PORT`             | No       | `5000`                  | Port for the Express server                            |
+| `NODE_ENV`         | No       | `development`           | Environment mode (`development`, `production`, `test`) |
+| `CLIENT_URL`       | Yes      | `http://localhost:5173` | Allowed CORS origin                                    |
+| `MONGODB_URI`      | Yes      | -                       | MongoDB connection string                              |
+| `JWT_SECRET`       | Yes      | -                       | Secret key for signing session tokens (64+ chars)      |
+| `JWT_EXPIRES_IN`   | No       | `7d`                    | Token expiry duration                                  |
+| `GOOGLE_CLIENT_ID` | Yes      | -                       | Google OAuth 2.0 Web Client ID                         |
+| `GEMINI_API_KEY`   | Yes      | -                       | Google Gemini AI API key                               |
+| `GEMINI_MODEL`     | No       | `gemini-2.5-flash`      | Gemini model identifier                                |
 
 ### Client (`client/.env`)
-| Variable | Required | Default | Purpose |
-|---|---|---|---|
-| `VITE_API_URL` | Yes | `http://localhost:5000/api` | Backend API base URL |
-| `VITE_GOOGLE_CLIENT_ID` | Yes | - | Google OAuth Client ID for GIS button |
+
+| Variable                | Required | Default                     | Purpose                               |
+| ----------------------- | -------- | --------------------------- | ------------------------------------- |
+| `VITE_API_URL`          | Yes      | `http://localhost:5000/api` | Backend API base URL                  |
+| `VITE_GOOGLE_CLIENT_ID` | Yes      | -                           | Google OAuth Client ID for GIS button |
 
 ---
 

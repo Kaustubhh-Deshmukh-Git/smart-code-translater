@@ -32,7 +32,7 @@ const historySchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 historySchema.index({ userId: 1, createdAt: -1 });

@@ -51,8 +51,7 @@ const LoginPage = () => {
         navigate("/");
       }
     } catch (error) {
-      const message =
-        error.response?.data?.message || error.message || "Authentication failed.";
+      const message = error.response?.data?.message || error.message || "Authentication failed.";
       toast.error(message);
     } finally {
       setLoading(false);
@@ -146,14 +145,8 @@ const LoginPage = () => {
           </div>
 
           <div className="toggle-mode">
-            <span>
-              {isSignUp ? "Already have an account?" : "Don't have an account?"}
-            </span>
-            <button
-              type="button"
-              className="btn-toggle"
-              onClick={() => setIsSignUp(!isSignUp)}
-            >
+            <span>{isSignUp ? "Already have an account?" : "Don't have an account?"}</span>
+            <button type="button" className="btn-toggle" onClick={() => setIsSignUp(!isSignUp)}>
               {isSignUp ? "Sign In" : "Sign Up"}
             </button>
           </div>

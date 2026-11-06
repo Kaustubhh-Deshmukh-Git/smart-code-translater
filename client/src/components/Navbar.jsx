@@ -33,10 +33,7 @@ const Navbar = () => {
 
       <ul className="navbar-links">
         <li>
-          <Link
-            to="/"
-            className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
-          >
+          <Link to="/" className={`nav-link ${location.pathname === "/" ? "active" : ""}`}>
             Editor
           </Link>
         </li>
@@ -54,15 +51,9 @@ const Navbar = () => {
         <div className="navbar-user">
           <div className="user-profile">
             {user.picture ? (
-              <img
-                src={user.picture}
-                alt={user.name || "Avatar"}
-                className="user-avatar"
-              />
+              <img src={user.picture} alt={user.name || "Avatar"} className="user-avatar" />
             ) : (
-              <div className="user-avatar-placeholder">
-                {getInitial(user.name)}
-              </div>
+              <div className="user-avatar-placeholder">{getInitial(user.name)}</div>
             )}
             <span className="user-name">{user.name}</span>
           </div>

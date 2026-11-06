@@ -1,4 +1,5 @@
-export const TRANSLATE_PROMPT = (code, sourceLang, targetLang) => `
+export const TRANSLATE_PROMPT = (code, sourceLang, targetLang) =>
+  `
 You are an expert programmer and code translator.
 Your task is to translate the following code from ${sourceLang} to ${targetLang}.
 
@@ -17,7 +18,8 @@ ${code}
 ===CODE END===
 `.trim();
 
-export const ANALYZE_COMPLEXITY_PROMPT = (code, language) => `
+export const ANALYZE_COMPLEXITY_PROMPT = (code, language) =>
+  `
 You are an expert algorithm analyst and computer scientist.
 Analyze the time complexity and space complexity of the provided ${language} code.
 
@@ -39,7 +41,8 @@ ${code}
 ===CODE END===
 `.trim();
 
-export const OPTIMIZE_PROMPT = (code, language) => `
+export const OPTIMIZE_PROMPT = (code, language) =>
+  `
 You are a senior software architect and performance optimization expert.
 Optimize the provided ${language} code for better performance, memory efficiency, readability, and idiomatic style while strictly preserving its original functionality.
 
@@ -61,7 +64,8 @@ ${code}
 ===CODE END===
 `.trim();
 
-export const EXPLAIN_PROMPT = (code, language) => `
+export const EXPLAIN_PROMPT = (code, language) =>
+  `
 You are a patient, supportive programming teacher explaining code to a student.
 Explain the provided ${language} code clearly and thoroughly.
 

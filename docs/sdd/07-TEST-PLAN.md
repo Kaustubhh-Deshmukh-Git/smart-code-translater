@@ -1,6 +1,7 @@
 # 07 - Test Plan
 
 ## Part 1 acceptance (manual, run in C19)
+
 - [x] Visit `/` logged out -> redirected to `/login`
 - [x] Register new user -> lands on `/`, name visible
 - [x] Register same email again -> error toast "Email already registered."
@@ -13,6 +14,7 @@
 - [x] `GET /api/auth/me` without token -> 401; unknown route -> 404 envelope
 
 ## Part 2 acceptance (manual, run in C34)
+
 - [x] Translate Python -> Java returns plain Java (no markdown fences)
 - [x] Swap moves translated code into the editor and swaps languages
 - [x] Analyze `for i in range(n): pass` -> Time O(n), Space O(1)
@@ -27,10 +29,11 @@
 - [x] Gemini failure -> friendly toast, app stays usable
 
 ## Automated (H4)
-| Layer | Tests | Status |
-|---|---|---|
-| server unit | prompts.utils (fenced/plain/invalid), jwt.utils (round trip, tamper), languages | PASS (15 tests) |
-| server integration (supertest) | health 200, 404 envelope, 401 without token, register validation 400 | PASS (4 tests) |
-| client unit | ProtectedRoute redirect/render, OutputPanel all five states | PASS (8 tests) |
+
+| Layer                          | Tests                                                                           | Status          |
+| ------------------------------ | ------------------------------------------------------------------------------- | --------------- |
+| server unit                    | prompts.utils (fenced/plain/invalid), jwt.utils (round trip, tamper), languages | PASS (15 tests) |
+| server integration (supertest) | health 200, 404 envelope, 401 without token, register validation 400            | PASS (4 tests)  |
+| client unit                    | ProtectedRoute redirect/render, OutputPanel all five states                     | PASS (8 tests)  |
 
 CI runs lint + tests + build on every push and PR. Coverage target >= 70% on touched utils/services.
