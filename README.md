@@ -1,5 +1,7 @@
 # Smart Code Translator
 
+[![CI](https://github.com/Kaustubhh-Deshmukh-Git/smart-code-translater/actions/workflows/ci.yml/badge.svg)](https://github.com/Kaustubhh-Deshmukh-Git/smart-code-translater/actions/workflows/ci.yml)
+
 AI-powered full-stack app to **translate**, **analyze (Big-O)**, **optimize** and **explain** code across C, C++, C#, Java and Python.
 Stack: React + Vite - Express - MongoDB (Mongoose) - JWT + Google SSO - Google Gemini - Monaco Editor.
 
@@ -13,7 +15,7 @@ Stack: React + Vite - Express - MongoDB (Mongoose) - JWT + Google SSO - Google G
 
 ## Quick start
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/smart-code-translater.git && cd smart-code-translater
+git clone https://github.com/Kaustubhh-Deshmukh-Git/smart-code-translater.git && cd smart-code-translater
 cp server/.env.example server/.env   # fill values
 cp client/.env.example client/.env   # fill values
 npm --prefix server install && npm --prefix client install

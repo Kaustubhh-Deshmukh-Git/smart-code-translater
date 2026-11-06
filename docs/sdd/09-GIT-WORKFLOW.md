@@ -31,8 +31,15 @@ git push origin main
 | v1.0.0 | hardened baseline (security, tests, CI, Docker) |
 Patch fixes after release: `v1.0.1`, ... Create GitHub releases with `gh release create`.
 
-## Branch protection (after H5)
-`main`: require status checks `server` + `client`; admin bypass enabled so solo pushes keep working; no force pushes; no deletions.
+## Branch protection (enacted in H5)
+- **Target branch:** `main`
+- **Protection rules:**
+  1. **Require status checks to pass before merging:**
+     - Required status checks: `server`, `client` (from `.github/workflows/ci.yml`)
+     - Require branches to be up to date before merging.
+  2. **Admin bypass enabled:** Allows repo administrator / solo developer to push directly while enforcing pipeline validation on PRs and automated status reporting.
+  3. **Block force pushes:** Enabled (no force pushes to `main`).
+  4. **Restrict deletions:** Enabled (prevent accidental branch deletion).
 
 ## Never commit
 `.env*` (except `.env.example`), `node_modules`, `dist`, coverage, logs, API keys, personal data.

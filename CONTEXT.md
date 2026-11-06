@@ -62,12 +62,12 @@
 - [x] H2 - Security hardening
 - [x] H3 - Observability and ops basics
 - [x] H4 - Automated tests
-- [ ] H5 - CI/CD and repo governance
+- [x] H5 - CI/CD and repo governance
 - [ ] H6 - Containerization
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`H5`
+`H6`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
