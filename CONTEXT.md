@@ -61,13 +61,13 @@
 - [x] H1 - Lint, format, commit hooks
 - [x] H2 - Security hardening
 - [x] H3 - Observability and ops basics
-- [ ] H4 - Automated tests
+- [x] H4 - Automated tests
 - [ ] H5 - CI/CD and repo governance
 - [ ] H6 - Containerization
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`H4`
+`H5`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
