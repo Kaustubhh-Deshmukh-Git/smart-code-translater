@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
+import morgan from "morgan";
 import routes from "./routes/index.js";
 import { notFoundHandler, errorHandler } from "./middleware/error.middleware.js";
 
@@ -21,6 +22,12 @@ if (process.env.TRUST_PROXY) {
   app.set("trust proxy", trustValue);
 } else {
   app.set("trust proxy", 1);
+}
+
+// Request logging (dev in development, combined in production, skipped in tests)
+if (process.env.NODE_ENV !== "test") {
+  const morganFormat = process.env.NODE_ENV === "production" ? "combined" : "dev";
+  app.use(morgan(morganFormat));
 }
 
 // CORS allow-list
