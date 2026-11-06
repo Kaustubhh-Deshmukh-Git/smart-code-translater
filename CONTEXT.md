@@ -52,7 +52,7 @@
 - [x] C28 - Frontend language constants
 - [x] C29 - Code + history service functions
 - [x] C30 - CodeEditor + LanguageSelector
-- [ ] C31 - OutputPanel
+- [x] C31 - OutputPanel
 - [ ] C32 - HomePage workspace
 - [ ] C33 - HistoryList + HistoryPage
 - [ ] C34 - Final routing update + release v0.2.0
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C31`
+`C32`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
