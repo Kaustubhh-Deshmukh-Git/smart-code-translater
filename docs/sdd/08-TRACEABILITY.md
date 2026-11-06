@@ -44,4 +44,4 @@ Requirement -> implementing chunk(s). Fill the commit column with the short hash
 | H4 | Automated tests | Industry practice (not in guide) | NFR-T1 | `bc4e216` |
 | H5 | CI/CD and repo governance | Industry practice (not in guide) | NFR-M1 | `fcea648` |
 | H6 | Containerization | Industry practice (not in guide) | NFR-O1 | `82c3736` |
-| H7 | Final documentation + release v1.0.0 | Industry practice (not in guide) | NFR-M1 | `pending` |
+| H7 | Final documentation + release v1.0.0 | Industry practice (not in guide) | NFR-M1 | `51095cd` |
