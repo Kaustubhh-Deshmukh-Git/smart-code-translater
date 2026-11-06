@@ -49,7 +49,7 @@
 - [x] C27 - Code + history routes, registry update
 
 ### Part 2 - Frontend (Editor, Output, History)
-- [ ] C28 - Frontend language constants
+- [x] C28 - Frontend language constants
 - [ ] C29 - Code + history service functions
 - [ ] C30 - CodeEditor + LanguageSelector
 - [ ] C31 - OutputPanel
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C28`
+`C29`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
