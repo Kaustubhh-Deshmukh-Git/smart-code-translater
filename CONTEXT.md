@@ -55,7 +55,7 @@
 - [x] C31 - OutputPanel
 - [x] C32 - HomePage workspace
 - [x] C33 - HistoryList + HistoryPage
-- [ ] C34 - Final routing update + release v0.2.0
+- [x] C34 - Final routing update + release v0.2.0
 
 ### Part 3 - Industry Hardening (added on top of the guide)
 - [ ] H1 - Lint, format, commit hooks
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C34`
+`H1`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
