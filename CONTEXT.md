@@ -50,7 +50,7 @@
 
 ### Part 2 - Frontend (Editor, Output, History)
 - [x] C28 - Frontend language constants
-- [ ] C29 - Code + history service functions
+- [x] C29 - Code + history service functions
 - [ ] C30 - CodeEditor + LanguageSelector
 - [ ] C31 - OutputPanel
 - [ ] C32 - HomePage workspace
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C29`
+`C30`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
