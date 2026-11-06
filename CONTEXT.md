@@ -54,7 +54,7 @@
 - [x] C30 - CodeEditor + LanguageSelector
 - [x] C31 - OutputPanel
 - [x] C32 - HomePage workspace
-- [ ] C33 - HistoryList + HistoryPage
+- [x] C33 - HistoryList + HistoryPage
 - [ ] C34 - Final routing update + release v0.2.0
 
 ### Part 3 - Industry Hardening (added on top of the guide)
@@ -67,7 +67,7 @@
 - [ ] H7 - Final documentation + release v1.0.0
 
 ## Current chunk
-`C33`
+`C34`
 
 ## Decisions / deviations
 See `docs/sdd/10-DECISIONS.md`.
